@@ -1,2 +1,2 @@
-./bin/start
-./bin/stop
+./bin/local_start
+./bin/local_stop
