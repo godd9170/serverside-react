@@ -3,7 +3,7 @@ var pwd = path.resolve(__dirname); // jshint ignore:line
 
 module.exports = {
   entry: {
-    'app': 'App.jsx',
+    'app': './App/Main.jsx',
   },
   output: {
     path: './build',
