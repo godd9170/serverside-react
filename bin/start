@@ -1,0 +1,14 @@
+#!/bin/sh
+mkdir -p /home/henrygoddard/webapps/blog/run
+pid=$(/sbin/pidof /home/henrygoddard/webapps/blog/bin/node)
+if echo "$pid" | grep -q " "; then
+  pid=""
+fi
+if [ -n "$pid" ]; then
+  user=$(ps -p $pid -o user | tail -n 1)
+  if [ $user = "henrygoddard" ]; then
+    exit 0
+  fi
+fi
+nohup /home/henrygoddard/webapps/blog/bin/node /home/henrygoddard/webapps/blog/hello-world.js > /dev/null 2>&1 &
+/sbin/pidof /home/henrygoddard/webapps/blog/bin/node > /home/henrygoddard/webapps/blog/run/node.pid
