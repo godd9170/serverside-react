@@ -10,5 +10,5 @@ if [ -n "$pid" ]; then
     exit 0
   fi
 fi
-nohup /home/henrygoddard/webapps/blog/bin/node /home/henrygoddard/webapps/blog/hello-world.js > /dev/null 2>&1 &
+nohup /home/henrygoddard/webapps/blog/bin/node /home/henrygoddard/webapps/blog/index.js > /dev/null 2>&1 &
 /sbin/pidof /home/henrygoddard/webapps/blog/bin/node > /home/henrygoddard/webapps/blog/run/node.pid
