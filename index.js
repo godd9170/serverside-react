@@ -4,7 +4,7 @@ var literalify = require('literalify');
 var React = require('react'),
     DOM = React.DOM, body = DOM.body, div = DOM.div, script = DOM.script;
 // This is our React component, shared by server and browser thanks to browserify
-var App = React.createFactory(require('./build/app.entry'));
+var App = React.createFactory(require('./App.js'));
 var app = express();
 
 
